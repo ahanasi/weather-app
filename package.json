@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "homepage": "https://ahanasi.github.io/weather-app",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "lint": "./node_modules/.bin/eslint",
