@@ -4,6 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "lint": "./node_modules/.bin/eslint",
@@ -33,6 +35,7 @@
     "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "moment": "^2.29.1"
   }
 }
