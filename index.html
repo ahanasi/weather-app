@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Getting Started</title>
+  </head>
+  <body class="flex flex-col place-items-center">
+    <header class="flex place-content-center my-5 min-h-full">
+      <h1 class="wdn-text-hidden page-title">Weather app</h1>
+      <section class="flex text-5xl font-extralight items-center">
+        <form id="locationForm">
+          Is it raining in
+          <label class="hidden text-gray-700 text-base font-bold mb-2" for="location">Location</label>
+          <input
+            class="inline appearance-none focus border-b-2 rounded min-w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+            id="location"
+            type="text"
+            placeholder="London"
+          />
+          ?
+          <button class="searchBtn text-3xl bg-white hover:bg-gray-100 text-gray-800 ml-5 py-2 px-4 border border-gray-400 rounded shadow" type="submit">Find out!</button>
+        </form>
+      </section>
+    </header>
+    <div class="unknown-city hidden w-4/12 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold">Uh oh!</strong>
+      <span class="block sm:inline">Please enter a valid city.</span>
+      <span class="alert-close-btn absolute top-0 bottom-0 right-0 px-4 py-3">
+        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+      </span>
+    </div>
+    <main class="flex place-content-center my-10">
+      <article class="forecast flex flex-col max-w-xs bg-yellow-50 shadow-md rounded px-6 pt-6 pb-8 mb-4">
+        <header class="flex flex-col text-3xl py-2">
+          <h1 class="forecast-city">Dallas</h1>
+          <section class="flex text-lg font-thin text-gray-600">
+              <p class="forecast-byline"></p>
+          </section>
+        </header>
+        <section class="main-weather-data flex items-center justify-between">
+          <div class="flex flex-col place-items-start font-light">
+            <p class="main-temp text-5xl mb-2">23°C</p>
+            <p class="text-base">Feels like <strong class="feels-like ">21°C</strong></p>
+          </div>
+          <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@4x.png" alt="Weather Icon" />
+        </section>
+        <section class="other-temp-data flex place-content-between">
+          <p class="max-min text-base"><span class="max-temp">30°C</span> / <span class="min-temp opacity-40">20°C</span></p>
+          <div class="button-group">
+            <button class="celcius-btn temp-switch opacity-50">°C</button> /
+            <button class="fht-btn temp-switch">°F</button>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer></footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
